@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Test artifacts
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log

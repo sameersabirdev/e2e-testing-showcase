@@ -1,0 +1,12 @@
+{
+  "validCustomer": {
+    "firstName": "Sameer",
+    "lastName": "Sabir",
+    "postalCode": "54000"
+  },
+  "products": {
+    "backpack": "Sauce Labs Backpack",
+    "bikeLight": "Sauce Labs Bike Light",
+    "boltTshirt": "Sauce Labs Bolt T-Shirt"
+  }
+}
