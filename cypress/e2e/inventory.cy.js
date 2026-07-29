@@ -10,9 +10,7 @@ describe("Product inventory", () => {
   });
 
   beforeEach(() => {
-    // Reuse a cached session instead of re-logging-in through the UI each test.
     cy.loginBySession("standard_user", "secret_sauce");
-    cy.visit("/inventory.html");
   });
 
   it("displays the full product catalogue", () => {

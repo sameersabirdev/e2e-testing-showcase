@@ -13,7 +13,6 @@ describe("Checkout", () => {
 
   beforeEach(() => {
     cy.loginBySession("standard_user", "secret_sauce");
-    cy.visit("/inventory.html");
   });
 
   it("completes an end-to-end purchase", () => {

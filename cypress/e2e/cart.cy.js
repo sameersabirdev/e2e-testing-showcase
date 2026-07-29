@@ -4,7 +4,6 @@ const cartPage = require("../pages/CartPage");
 describe("Shopping cart", () => {
   beforeEach(() => {
     cy.loginBySession("standard_user", "secret_sauce");
-    cy.visit("/inventory.html");
   });
 
   it("carries multiple added items through to the cart", () => {

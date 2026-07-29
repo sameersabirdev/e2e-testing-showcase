@@ -60,7 +60,10 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium firefox webkit --with-deps
+
+      - name: Create auth directory
+        run: mkdir -p playwright/.auth
 
       - name: Run Playwright
         run: npx playwright test

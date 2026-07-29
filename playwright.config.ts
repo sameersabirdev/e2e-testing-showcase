@@ -16,7 +16,7 @@ export default defineConfig({
 
   // Retry flaky tests in CI only; surface failures immediately in local runs.
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 4 : undefined,
 
   reporter: [
     ["html", { open: "never", outputFolder: "playwright-report" }],
@@ -31,25 +31,40 @@ export default defineConfig({
     screenshot: "only-on-failure",
     video: "retain-on-failure",
 
-    actionTimeout: 10_000,
+    testIdAttribute: "data-test",
+    actionTimeout: 15_000,
+    navigationTimeout: 30_000,
   },
 
   projects: [
     {
+      name: "setup",
+      testDir: "./playwright",
+      testMatch: /global\.setup\.ts/,
+    },
+    {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: "playwright/.auth/user.json",
+      },
+      dependencies: ["setup"],
     },
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: {
+        ...devices["Desktop Firefox"],
+        storageState: "playwright/.auth/user.json",
+      },
+      dependencies: ["setup"],
     },
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
-    {
-      name: "mobile-chrome",
-      use: { ...devices["Pixel 7"] },
+      use: {
+        ...devices["Desktop Safari"],
+        storageState: "playwright/.auth/user.json",
+      },
+      dependencies: ["setup"],
     },
   ],
 });

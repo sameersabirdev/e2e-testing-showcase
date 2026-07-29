@@ -30,9 +30,9 @@ describe("Authentication", () => {
   });
 
   it("requires a username", () => {
-    loginPage.login(" ", users.standard.password);
-    // Space then cleared leaves the field empty on submit.
-    cy.get("[data-test='username']").clear();
+    cy.get("[data-test='password']").type(users.standard.password, {
+      log: false,
+    });
     cy.get("[data-test='login-button']").click();
     loginPage.assertErrorContains("Username is required");
   });
