@@ -1,12 +1,12 @@
 # E2E Testing Showcase — Cypress & Playwright
 
-![CI](https://github.com/SameerSabir/e2e-testing-showcase/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/sameersabirdev/e2e-testing-showcase/actions/workflows/ci.yml/badge.svg)
 ![Cypress](https://img.shields.io/badge/Cypress-13-17202C?logo=cypress)
 ![Playwright](https://img.shields.io/badge/Playwright-1.48-2EAD33?logo=playwright)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-A production-style end-to-end test suite for [saucedemo.com](https://www.saucedemo.com), the **same user journeys implemented twice** — once in **Cypress (JavaScript)** and once in **Playwright (TypeScript)** — so you can compare the two tools on identical ground.
+A production-style end-to-end test suite for saucedemo, the **same user journeys implemented twice** — once in **Cypress (JavaScript)** and once in **Playwright (TypeScript)** — so you can compare the two tools on identical ground.
 
 Most of my client testing work sits behind NDAs, so this repository exists as a public, readable reference for how I structure real E2E suites: the Page Object Model, fixtures and typed test data, session reuse, business-logic assertions, cross-browser runs, and CI on every push.
 
@@ -125,4 +125,4 @@ MIT — see [LICENSE](LICENSE). Free to fork, learn from, or adapt.
 
 ---
 
-**Built by [Sameer Sabir](https://www.linkedin.com/in/sameer-sabir/)** — Frontend Engineer (React / Next.js) who tests what he ships.
+**Built by [Sameer Sabir](https://www.linkedin.com/in/sameersabir/)** — AI Frontend Engineer (React / Next.js) who tests what he ships.

@@ -1,7 +1,7 @@
 {
   "name": "e2e-testing-showcase",
   "version": "1.0.0",
-  "description": "End-to-end test automation showcase for saucedemo.com — the same suite implemented in both Cypress (JavaScript) and Playwright (TypeScript), with the Page Object Model, fixtures, custom commands, HTML reporting, and GitHub Actions CI.",
+  "description": "End-to-end test automation showcase for saucedemo — the same suite implemented in both Cypress (JavaScript) and Playwright (TypeScript), with the Page Object Model, fixtures, custom commands, HTML reporting, and GitHub Actions CI.",
   "author": "Sameer Sabir",
   "license": "MIT",
   "scripts": {
