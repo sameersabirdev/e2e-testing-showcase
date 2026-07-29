@@ -1,12 +1,12 @@
 name: E2E Tests
 
-# Runs the full suite on every push and pull request to main, plus a
+# Runs the full suite on every push and pull request to master, plus a
 # scheduled nightly run to catch breakage caused by changes to the target site.
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   schedule:
     - cron: "0 6 * * *" # 06:00 UTC daily
 
